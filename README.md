@@ -1,22 +1,33 @@
-# DIO - Trilha .NET - Programação orientada a objetos
-www.dio.me
+# Sistema de Celulares - Abstração e Polimorfismo com .NET
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de orientação a objetos, da trilha .NET da DIO.
+Solução para o desafio de projeto **"Abstraindo um Celular"** da trilha .NET da **DIO**.
 
-## Contexto
-Você é responsável por modelar um sistema que trabalha com celulares. Para isso, foi solicitado que você faça uma abstração de um celular e disponibilize maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos.
+## 🎯 Objetivo do Projeto
+O objetivo principal foi estruturar um sistema orientado a objetos que abstrai o funcionamento básico de celulares, permitindo comportamentos específicos para diferentes marcas (Nokia e iPhone) através de herança e polimorfismo.
 
-## Proposta
-Você precisa criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone. 
-Você deve criar as suas classes de acordo com o diagrama abaixo:
+## 🏗️ Arquitetura e Conceitos Aplicados
 
-![Diagrama classes](Imagens/diagrama.png)
+O projeto foi estruturado com base nos seguintes pilares da POO:
 
-## Regras e validações
-1. A classe **Smartphone** deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
-2. A classe **Nokia** e **Iphone** devem ser classes filhas de Smartphone.
-3. O método **InstalarAplicativo** deve ser sobrescrito na classe Nokia e iPhone, pois ambos possuem diferentes maneiras de instalar um aplicativo.
+1.  **Abstração:** Criação da classe base `Smartphone` que define o contrato (propriedades e métodos) que todo celular deve ter, mas não pode ser instanciada diretamente.
+2.  **Herança:** As classes `Nokia` e `Iphone` herdam as características de `Smartphone` (Número, Modelo, IMEI, Memória).
+3.  **Polimorfismo:** Sobrescrita do método abstrato `InstalarAplicativo`, permitindo que cada marca tenha sua própria implementação (lógica) de instalação.
+4.  **Encapsulamento:** Proteção dos dados sensíveis e acesso controlado via construtores e propriedades.
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+### Diagrama de Classes (Referência)
+O sistema segue a estrutura proposta:
+* **Smartphone (Abstrata):** Classe pai.
+* **Nokia (Concreta):** Classe filha.
+* **Iphone (Concreta):** Classe filha.
+
+## 🛠️ Tecnologias
+* **C#**
+* **.NET** (Console Application)
+
+## 🚀 Como Executar
+1. Clone este repositório.
+2. Abra o projeto no VS Code ou Visual Studio.
+3. Execute o comando no terminal:
+
+```bash
+dotnet run
